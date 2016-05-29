@@ -1,11 +1,12 @@
 
 Google leveldb in windows for Visual Studio 2013
+========================================
 
 [原项目地址](https://github.com/bureau14/leveldb)
 
 这里是基于这个项目使用VS2013建立的一个 Console 应用程序，如果需要编译为静态库，直接修改项目属性即可。鉴于各种版本的库下载下来都不能直接用，需要各种设置修改，此处备份一个可以直接使用的项目。
 
-leveldb需要使用boost库，下载官方boost源码，按说明编译即可。boost的编译说明和编译方式非常人性话，基本按说明就可以编译成功。boost目录和项目处于同级目录，如果不是，需要修改项目的boost路径设置。
+leveldb需要使用boost库，下载官方boost源码，按说明编译即可。boost的编译说明和编译方式非常人性化，基本按说明就可以编译成功。boost目录和项目处于同级目录，如果不是，需要修改项目的boost路径设置。boost lib库分别为 state/lib_x86 和 state/lib_x64，默认并不是这两个目录，我是每编译完一个版本，比如x64就重命名为lib_x64，在编译完32为版本，命名为lib_x86。
 
 LevelDB qdb branch
 ==================
