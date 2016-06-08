@@ -17,8 +17,14 @@ leveldbutil
 *.lai
 *.la
 *.a
-
-
+*.opensdf
+*.sdf
+*.suo
+*.lib
+*.filters
+/ipch/
+/Debug/
+/Release/
 /project/
 
 # CMake

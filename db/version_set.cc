@@ -690,7 +690,7 @@ class VersionSet::Builder {
       // same as the compaction of 40KB of data.  We are a little
       // conservative and allow approximately one seek for every 16KB
       // of data before triggering a compaction.
-      f->allowed_seeks = (f->file_size / 16384);
+      f->allowed_seeks = (size_t)(f->file_size / 16384);
       if (f->allowed_seeks < 100) f->allowed_seeks = 100;
 
       levels_[level].deleted_files.erase(f->number);
@@ -1234,7 +1234,7 @@ Iterator* VersionSet::MakeInputIterator(Compaction* c) {
       }
     }
   }
-  assert(num <= space);
+  assert(num <= (int)space);
   Iterator* result = NewMergingIterator(&icmp_, list, num);
   delete[] list;
   return result;
